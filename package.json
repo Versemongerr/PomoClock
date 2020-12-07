@@ -1,0 +1,31 @@
+{
+  "name": "PomodoroClock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "homepage": "https://blog.csdn.net/verse_monger",
+  "author": {
+    "name": "PanQi",
+    "email": "panq2019@lzu.edu.cn"
+  },
+  "dependencies": {
+    "electron-packager": "^15.2.0"
+  },
+  "build": {
+    "productName": "PomodoroClock",
+    "appId": "com.electron.versemonger",
+    "linux": {
+      "icon": "tomato.png"
+    }
+  },
+  "devDependencies": {
+    "electron": "^11.0.3",
+    "electron-builder": "^22.9.1"
+  },
+  "scripts": {
+    "start": "electron .",
+    "packager-linux": "electron-packager ./ PomodoroClock --overwrite --app--version=0.0.1 --platform=linux --arch=armv7l",
+    "packager-win": "electron-packager ./ PomodoroClock --overwrite --app--version=0.0.1",
+    "packdeb-linux": "electron-builder --linux deb tar.xz --armv7l"
+  }
+}
